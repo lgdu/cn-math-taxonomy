@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Independent olympiad extension MVP",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "namespace",
+    "upstream",
+    "capabilities",
+    "questions"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "namespace": {
+      "const": "ext.olymp"
+    },
+    "upstream": {
+      "type": "object",
+      "required": [
+        "repository",
+        "commit",
+        "read_only"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "read_only": {
+          "const": true
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "name",
+          "prerequisites",
+          "success_criteria",
+          "review",
+          "provenance"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^ext\\.olymp\\."
+          },
+          "kind": {
+            "const": "capability"
+          },
+          "name": {
+            "type": "string"
+          },
+          "success_criteria": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "prerequisites": {
+            "type": "object",
+            "required": [
+              "all_of",
+              "any_of_paths"
+            ],
+            "properties": {
+              "all_of": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "any_of_paths": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "review": {
+            "$ref": "#/$defs/review"
+          },
+          "provenance": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "capability_ids",
+          "prompt",
+          "answer",
+          "solution_steps",
+          "difficulty",
+          "review",
+          "provenance"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^ext\\.olymp\\.q[0-9]+$"
+          },
+          "capability_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "solution_steps": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "depends_on",
+                "capability_id",
+                "claim"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "depends_on": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "capability_id": {
+                  "type": "string"
+                },
+                "claim": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "difficulty": {
+            "type": "object",
+            "required": [
+              "framework",
+              "level",
+              "calibration"
+            ],
+            "properties": {
+              "framework": {
+                "const": "audit_depth_v1"
+              },
+              "level": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 4
+              },
+              "calibration": {
+                "enum": [
+                  "uncalibrated",
+                  "pilot_calibrated"
+                ]
+              }
+            }
+          },
+          "review": {
+            "$ref": "#/$defs/review"
+          },
+          "provenance": {
+            "type": "object",
+            "required": [
+              "origin",
+              "source_problem_ids",
+              "rights_status"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "review": {
+      "type": "object",
+      "required": [
+        "status",
+        "teacher_reviewed"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "ai_draft",
+            "teacher_reviewed",
+            "rejected"
+          ]
+        },
+        "teacher_reviewed": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

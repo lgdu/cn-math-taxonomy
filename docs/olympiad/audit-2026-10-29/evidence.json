@@ -1,0 +1,551 @@
+{
+  "repository": "lgdu/cn-math-taxonomy",
+  "commit": "c71ca266cf360827c0a24f31db99c2b156ba70e1",
+  "audit_date": "2026-10-29",
+  "scope": "小学数学cnm_p*；重点grade=5/6；查阅259节点名称/描述，100高年级challenge题全读，针对矩阵相关节点核对全套4题及直接先修；不声称逐题盲解400题或完整奥数覆盖",
+  "source_fingerprints": {
+    "topics.json": {
+      "git_blob": "1aea5603fda3bdf37d4efef6ee72687f888e7cdb",
+      "sha256": "662dda00faf18e8b379cdae912e0a776b2ef042c38c35d8f4eb41a59a1b7341f"
+    },
+    "questions.json": {
+      "git_blob": "642339e1ccf43785c42f07deba530f055b1b0c84",
+      "sha256": "7a5e9e8af0f5b048a5b134b2d15d9faebb64dd2c3cbf4952a9a1139093517fd3"
+    },
+    "dependencies.json": {
+      "git_blob": "7a4b1f6a3f16024b714aec2c25a1798724c6bf37",
+      "sha256": "3e6fa95058bcd2584390db6c7cb64b3cd34518017a81bf5178f9e6b12df96886"
+    }
+  },
+  "counts": {
+    "primary_topics": 259,
+    "grade5_topics": 52,
+    "grade6_topics": 48,
+    "primary_questions": 1036,
+    "grade5_6_questions": 400,
+    "primary_incoming_edges": 406,
+    "grade5_6_incoming_edges": 178,
+    "detailed_question_records": 23
+  },
+  "records": [
+    {
+      "question_id": "cnm_p153_q4",
+      "topic_id": "cnm_p153",
+      "grade": 5,
+      "topic_name": "因数和倍数",
+      "stored_difficulty": "challenge",
+      "review_summary": "共同倍数的区间计数，答案4；属于公倍数的直接应用。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p106",
+          "name": "除数是两位数的除法",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p156_q4",
+      "topic_id": "cnm_p156",
+      "grade": 5,
+      "topic_name": "奇数和偶数",
+      "stored_difficulty": "challenge",
+      "review_summary": "取最小的两个不同两位奇数求和，答案24；不能测奇偶不变量。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p154",
+          "name": "2和5的倍数的特征",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p157_q4",
+      "topic_id": "cnm_p157",
+      "grade": 5,
+      "topic_name": "质数和合数",
+      "stored_difficulty": "challenge",
+      "review_summary": "最小质数与最小合数相乘，答案8；不测质因数分解或整数约束。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p153",
+          "name": "因数和倍数",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p159_q4",
+      "topic_id": "cnm_p159",
+      "grade": 5,
+      "topic_name": "最小公倍数",
+      "stored_difficulty": "challenge",
+      "review_summary": "三个数求最小公倍数，答案24；不含余数平移。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p155",
+          "name": "3的倍数的特征",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p155_q4",
+      "topic_id": "cnm_p155",
+      "grade": 5,
+      "topic_name": "3的倍数的特征",
+      "stored_difficulty": "challenge",
+      "review_summary": "不重复两位组数再筛3的倍数，答案2；已有短推理链，但缺枚举方法先修。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p154",
+          "name": "2和5的倍数的特征",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p146_q3",
+      "topic_id": "cnm_p146",
+      "grade": 5,
+      "topic_name": "列方程解决实际问题",
+      "stored_difficulty": "standard",
+      "review_summary": "给定速度与路程求时间，答案3；为单段行程。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p145",
+          "name": "解简易方程",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p146_q4",
+      "topic_id": "cnm_p146",
+      "grade": 5,
+      "topic_name": "列方程解决实际问题",
+      "stored_difficulty": "challenge",
+      "review_summary": "先扣除梨价再求苹果单价，答案8；简单等量关系。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p145",
+          "name": "解简易方程",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p214_q4",
+      "topic_id": "cnm_p214",
+      "grade": 6,
+      "topic_name": "反比例",
+      "stored_difficulty": "challenge",
+      "review_summary": "工效2倍对应时间减半，答案5；未发生合作。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p213",
+          "name": "正比例",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p215_q3",
+      "topic_id": "cnm_p215",
+      "grade": 6,
+      "topic_name": "用比例解决实际问题",
+      "stored_difficulty": "standard",
+      "review_summary": "相同机器台数与时间反比，答案3；同质效率，非异质工效相加。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p213",
+          "name": "正比例",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p214",
+          "name": "反比例",
+          "strength": "soft"
+        },
+        {
+          "id": "cnm_p211",
+          "name": "解比例",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p215_q4",
+      "topic_id": "cnm_p215",
+      "grade": 6,
+      "topic_name": "用比例解决实际问题",
+      "stored_difficulty": "challenge",
+      "review_summary": "总量与日完成量换算，答案4；普通反比例应用。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p213",
+          "name": "正比例",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p214",
+          "name": "反比例",
+          "strength": "soft"
+        },
+        {
+          "id": "cnm_p211",
+          "name": "解比例",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p148_q4",
+      "topic_id": "cnm_p148",
+      "grade": 5,
+      "topic_name": "三角形的面积",
+      "stored_difficulty": "challenge",
+      "review_summary": "平行四边形沿对角线分半，答案48；等底等高思想已有入口。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p147",
+          "name": "平行四边形的面积",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p122",
+          "name": "三角形的分类",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p150_q4",
+      "topic_id": "cnm_p150",
+      "grade": 5,
+      "topic_name": "组合图形的面积",
+      "stored_difficulty": "challenge",
+      "review_summary": "长方形剪去角部正方形，答案56；割补方向已指定。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p148",
+          "name": "三角形的面积",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p149",
+          "name": "梯形的面积",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p176_q1",
+      "topic_id": "cnm_p176",
+      "grade": 5,
+      "topic_name": "找次品",
+      "stored_difficulty": "basic",
+      "review_summary": "题干写较重或较轻，却笼统断言三分一次定位；未知轻重时不成立。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p057",
+          "name": "乘加乘减的运算顺序",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p140",
+          "name": "可能性",
+          "strength": "soft"
+        },
+        {
+          "id": "cnm_p245",
+          "name": "怎样通知最快",
+          "strength": "soft"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p176_q4",
+      "topic_id": "cnm_p176",
+      "grade": 5,
+      "topic_name": "找次品",
+      "stored_difficulty": "challenge",
+      "review_summary": "已知偏重的27件三分称量，答案3；有策略，但需下界论证。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p057",
+          "name": "乘加乘减的运算顺序",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p140",
+          "name": "可能性",
+          "strength": "soft"
+        },
+        {
+          "id": "cnm_p245",
+          "name": "怎样通知最快",
+          "strength": "soft"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p179_q4",
+      "topic_id": "cnm_p179",
+      "grade": 6,
+      "topic_name": "分数乘法的应用",
+      "stored_difficulty": "challenge",
+      "review_summary": "连续两次取部分，答案18；常规分数应用。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p178",
+          "name": "一个数乘分数",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p111",
+          "name": "常见数量关系",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p247",
+          "name": "分数、小数混合运算及运算律",
+          "strength": "soft"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p184_q4",
+      "topic_id": "cnm_p184",
+      "grade": 6,
+      "topic_name": "分数除法的应用",
+      "stored_difficulty": "challenge",
+      "review_summary": "已知剩余部分反求整体，答案20；一层单位1反求。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p183",
+          "name": "分数除法",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p179",
+          "name": "分数乘法的应用",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p205_q4",
+      "topic_id": "cnm_p205",
+      "grade": 6,
+      "topic_name": "百分数的应用",
+      "stored_difficulty": "challenge",
+      "review_summary": "先涨后降同百分率，答案96%；已有单位1变化意识。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p197",
+          "name": "求百分率",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p204",
+          "name": "利率",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p216_q4",
+      "topic_id": "cnm_p216",
+      "grade": 6,
+      "topic_name": "鸽巢问题",
+      "stored_difficulty": "challenge",
+      "review_summary": "按生日月份分组求保证人数，答案4；抽屉直接给定。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p043",
+          "name": "除法的意义",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p050",
+          "name": "有余数除法的意义",
+          "strength": "soft"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p237_q4",
+      "topic_id": "cnm_p237",
+      "grade": 5,
+      "topic_name": "观察简单组合体",
+      "stored_difficulty": "challenge",
+      "review_summary": "多方向高度约束合并求最少积木，答案8；确有综合推理，正向覆盖证据。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p113",
+          "name": "从不同方向观察物体",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p221",
+          "name": "观察简单的立体积木",
+          "strength": "hard"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p241_q3",
+      "topic_id": "cnm_p241",
+      "grade": 6,
+      "topic_name": "体育中的数学",
+      "stored_difficulty": "standard",
+      "review_summary": "8队单循环赛，答案28；已出现两两配对去重。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p179",
+          "name": "分数乘法的应用",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p190",
+          "name": "圆的周长",
+          "strength": "soft"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p241_q4",
+      "topic_id": "cnm_p241",
+      "grade": 6,
+      "topic_name": "体育中的数学",
+      "stored_difficulty": "challenge",
+      "review_summary": "10队赛程减已赛场数，答案18；在现成计数公式上增加一步。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p179",
+          "name": "分数乘法的应用",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p190",
+          "name": "圆的周长",
+          "strength": "soft"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p245_q4",
+      "topic_id": "cnm_p245",
+      "grade": 5,
+      "topic_name": "怎样通知最快",
+      "stored_difficulty": "challenge",
+      "review_summary": "倍增通知覆盖21人，答案5轮；需同时说明容量上界和可实施安排。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p057",
+          "name": "乘加乘减的运算顺序",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p174",
+          "name": "分数加减混合",
+          "strength": "soft"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    },
+    {
+      "question_id": "cnm_p250_q4",
+      "topic_id": "cnm_p250",
+      "grade": 6,
+      "topic_name": "自行车里的数学",
+      "stored_difficulty": "challenge",
+      "review_summary": "齿数比、轮周长和脚蹬圈数结合，答案60；已有比与几何的短链。",
+      "direct_prerequisites": [
+        {
+          "id": "cnm_p185",
+          "name": "比的意义",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p190",
+          "name": "圆的周长",
+          "strength": "hard"
+        },
+        {
+          "id": "cnm_p213",
+          "name": "正比例",
+          "strength": "soft"
+        }
+      ],
+      "question_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/questions.json",
+      "topic_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/topics.json",
+      "dependency_source": "https://github.com/lgdu/cn-math-taxonomy/blob/c71ca266cf360827c0a24f31db99c2b156ba70e1/data/dependencies.json"
+    }
+  ]
+}
