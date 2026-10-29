@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>先独做，再合作 · 工程问题实验室</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="lesson.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">∑</span> 数学实验室 <span class="brand-divider">/</span> 工程问题</a>
+    <span class="draft-label">教学试验 · 待审核</span>
+  </header>
+  <main>
+    <div id="loading" role="status" class="loading">正在准备课程…</div>
+    <div id="load-error" class="error-card" role="alert" hidden>
+      <h1>课程暂时没有加载成功</h1>
+      <p id="load-error-text"></p>
+      <p>请在仓库根目录运行 <code>python3 -m http.server 8000</code>，再打开 <code>http://localhost:8000/olympiad/engineering/</code>。</p>
+      <button type="button" id="retry">重新加载</button>
+    </div>
+    <div id="lesson" hidden>
+      <section class="intro" aria-labelledby="lesson-title">
+        <div><div class="eyebrow">理解一个模型，走通每一步</div><h1 id="lesson-title">先独做，<span>再合作。</span></h1><p class="subtitle">把一项工作放到时间轴上，看清每个人完成了多少。</p></div>
+        <div class="lesson-number" aria-hidden="true">01<span>工程模型</span></div>
+      </section>
+      <section class="problem-card" aria-labelledby="problem-heading">
+        <div class="problem-heading"><span class="chip">一起想一想</span><h2 id="problem-heading">一项任务，两种节奏</h2></div>
+        <p id="problem-prompt"></p>
+        <p class="assumption">假设两人的效率保持不变，合作时互不影响。</p>
+      </section>
+      <div class="workspace">
+        <section class="visual-card" aria-labelledby="visual-heading">
+          <div class="card-heading"><div><div class="eyebrow">看见工作量</div><h2 id="visual-heading">同一项任务，换一种看法</h2></div><fieldset class="route-switch"><legend class="sr-only">选择计量方式</legend><label><input name="route" type="radio" value="integer_total" checked><span>分成36份</span></label><label><input name="route" type="radio" value="unit_one"><span>总量设为1</span></label></fieldset></div>
+          <div class="rate-cards"><div><span class="person-tag a-tag">甲</span><p>每天完成 <strong id="a-rate"></strong></p></div><div><span class="person-tag b-tag">乙</span><p>每天完成 <strong id="b-rate"></strong></p></div></div>
+          <div class="work-label"><span>总任务 <b id="total-label"></b></span><span id="day-label">已经过0天</span></div>
+          <div class="work-track" role="img" id="work-track" aria-label="任务完成情况"><div id="a-segment" class="work-segment a-segment"></div><div id="b-segment" class="work-segment b-segment"></div><div id="remaining-segment" class="work-segment remaining-segment"></div><div class="work-grid" aria-hidden="true"></div></div>
+          <div class="legend"><span><i class="swatch a-swatch"></i>甲完成 <b id="a-done"></b></span><span><i class="swatch b-swatch"></i>乙完成 <b id="b-done"></b></span><span><i class="swatch r-swatch"></i>剩余 <b id="remaining"></b></span></div>
+          <div class="phase-note" id="phase-note"></div>
+          <div class="timeline" aria-label="工作阶段"><div class="timeline-solo"><span>甲独做</span><b>前2天</b></div><div class="timeline-joint"><span>甲、乙合作</span><b id="joint-period">时长待求</b></div></div>
+          <div class="transport"><button id="play" class="play-button" type="button" aria-label="播放动画"><span aria-hidden="true">▶</span> 播放</button><label class="seek-label"><span class="sr-only">调整工作时间</span><input id="seek" type="range" min="0" max="24" step="1" value="0"></label><label class="speed-label"><span class="sr-only">播放速度</span><select id="speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+          <p class="unlock-note" id="unlock-note">先完成右侧5步推理，再看完整的合作过程。也可以直接观看讲解。</p>
+        </section>
+        <section class="exercise-card" aria-labelledby="exercise-heading">
+          <div class="exercise-top"><span id="progress-label" class="eyebrow">第1步 / 共5步</span><button id="reset" class="text-button" type="button">重新开始</button></div>
+          <ol id="stepper" class="stepper" aria-label="答题进度"></ol>
+          <div id="practice-panel">
+            <h2 id="exercise-heading" tabindex="-1"></h2><p id="step-prompt"></p>
+            <form id="answer-form" novalidate><label for="answer" class="answer-label">你的答案</label><div class="answer-row"><input id="answer" type="text" inputmode="text" autocomplete="off" spellcheck="false" maxlength="40" aria-describedby="answer-help feedback"><span id="answer-unit"></span></div><p id="answer-help" class="input-help">可以输入整数、小数或分数，例如 6、0.5、1/6。</p><button id="submit" class="primary-button" type="submit">检查这一步 <span aria-hidden="true">→</span></button></form>
+            <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+            <div id="hint-box" class="hint-box" hidden></div>
+            <div class="help-actions"><button id="hint" type="button" class="text-button">给我一点提示</button><button id="reveal-step" type="button" class="text-button">看这一步</button></div>
+            <button id="next" class="primary-button" type="button" hidden>下一步 →</button>
+          </div>
+          <div id="summary-panel" hidden><h2 id="summary-title" tabindex="-1"></h2><p id="summary-copy"></p><ol id="solution" class="solution"></ol><div class="summary-note" id="summary-note"></div></div>
+          <button id="explain" type="button" class="explain-button">观看完整讲解 <span aria-hidden="true">↗</span></button>
+        </section>
+      </div>
+      <section class="takeaway"><div class="takeaway-icon" aria-hidden="true">↳</div><div><h2>记住关系，比记住答案更有用</h2><p>先分清时间阶段，再计算每段完成量。相加的是每天完成的工作量，最后别忘了题目问的是哪一段时间。</p></div></section>
+      <footer><span>AI内容初稿，未经教师审核。一次答对不代表已经掌握。</span><span>答题记录只在当前页面内存中保留。 <a href="../../docs/olympiad/README.md">查看模块说明</a></span></footer>
+    </div>
+  </main>
+</body>
+</html>
