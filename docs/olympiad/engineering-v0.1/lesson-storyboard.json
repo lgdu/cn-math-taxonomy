@@ -1,0 +1,133 @@
+{
+  "version": "0.1",
+  "title": "先独做，再合作：把同一任务分成时间阶段",
+  "question_id": "ext.olymp.q003",
+  "primary_route": "integer_total",
+  "alternative_route": "unit_one",
+  "estimated_narration_seconds": 71,
+  "duration_note": "约71秒画面与讲解，不含答题、暂停、纠错和迁移训练；不是学习总时长承诺",
+  "scenes": [
+    {
+      "id": "scene0",
+      "math_step": "理解任务",
+      "screen_seconds": 8,
+      "narration": "先看清什么时候只有甲，什么时候两人一起做。题目最后问的是总时间。",
+      "visual": "画两段时间轴：甲独做2天；随后合作未知天。",
+      "state": {
+        "day": 0,
+        "A_completed": "0",
+        "B_completed": "0",
+        "remaining": "36"
+      },
+      "pause": "让孩子指出合作从哪一天开始。"
+    },
+    {
+      "id": "scene1",
+      "math_step": "选择总量",
+      "screen_seconds": 12,
+      "narration": "可以把总任务看作1，也可以选36份。我们先用36份，每一份只是同一任务的计量单位。",
+      "visual": "一条36格任务条；显示36÷12=3，36÷18=2。",
+      "state": {
+        "day": 0,
+        "A_rate": "3",
+        "B_rate": "2",
+        "total": "36"
+      },
+      "pause": "可切换总量设1，所有位置和比例保持一致，只改变数值标签。"
+    },
+    {
+      "id": "scene2",
+      "math_step": "d1",
+      "screen_seconds": 12,
+      "narration": "前两天只有甲工作，每天完成3份，共完成6份。",
+      "visual": "按天填充6格甲色，乙在时间轴上尚未加入。",
+      "state": {
+        "day": 2,
+        "A_completed": "6",
+        "B_completed": "0",
+        "remaining": "30"
+      },
+      "pause": "d1，然后d2；未作答时不提前显示答案。"
+    },
+    {
+      "id": "scene3",
+      "math_step": "d3",
+      "screen_seconds": 12,
+      "narration": "现在乙加入。同一天里，甲完成3份，乙完成2份，合起来5份。",
+      "visual": "显示同一“天”内两个独立贡献块，合并为5格；两人不能占用同一份工作。",
+      "state": {
+        "day": 2,
+        "joint_rate": "5",
+        "remaining": "30"
+      },
+      "pause": "d3；错误时播放1天的两个贡献块，再给澄清题。"
+    },
+    {
+      "id": "scene4",
+      "math_step": "d4",
+      "screen_seconds": 15,
+      "narration": "剩余30份，每天完成5份，需要合作6天。",
+      "visual": "逐日填充任务条，合作每轮甲3格、乙2格；时间从第2天推进到第8天。",
+      "state": {
+        "day": 8,
+        "A_completed": "24",
+        "B_completed": "12",
+        "remaining": "0"
+      },
+      "pause": "d4；允许暂停到任意一天，查看累计量和剩余量。"
+    },
+    {
+      "id": "scene5",
+      "math_step": "d5与核验",
+      "screen_seconds": 12,
+      "narration": "先独做2天，再合作6天，总共8天。甲完成24份，乙完成12份，正好36份。",
+      "visual": "时间轴标2+6=8；任务条按贡献分色；核验24+12=36。",
+      "state": {
+        "day": 8,
+        "A_completed": "24",
+        "B_completed": "12",
+        "remaining": "0"
+      },
+      "pause": "d5；再撤去任务条，给无提示变式。"
+    }
+  ],
+  "mathematical_contract": {
+    "total": "36",
+    "A_rate": "3",
+    "B_rate": "2",
+    "solo_days": "2",
+    "cooperate_days": "6",
+    "finish_day": "8",
+    "formula": "done(t)=3*t+2*max(0,t-2), 0<=t<=8",
+    "after_finish": "完成即停，不继续增长；显示范围固定为0到8天",
+    "invariants": [
+      "A_completed+B_completed+remaining=36",
+      "remaining>=0",
+      "乙在t<2时贡献为0"
+    ],
+    "presentation_time": "screen_seconds与数学day独立；播放速度不得改变数学速率关系",
+    "normalization": "显示单位1时所有工作量与效率除以36；时间不变"
+  },
+  "status": "storyboard_and_data_only",
+  "not_implemented": [
+    "动画渲染器",
+    "语音合成",
+    "真实学习者会话",
+    "自动掌握认证"
+  ],
+  "entry_requirements": {
+    "integer_total": [
+      "cnm_p111",
+      "cnm_p112",
+      "cnm_p159",
+      "cnm_p063"
+    ],
+    "unit_one": [
+      "cnm_p111",
+      "cnm_p174",
+      "cnm_p179",
+      "cnm_p183",
+      "cnm_p063"
+    ]
+  }
+}

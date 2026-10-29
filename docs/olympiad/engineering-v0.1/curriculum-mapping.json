@@ -1,0 +1,91 @@
+{
+  "upstream_commit": "c71ca266cf360827c0a24f31db99c2b156ba70e1",
+  "refs": [
+    {
+      "id": "cnm_p050",
+      "name": "有余数除法的意义",
+      "grade": 2
+    },
+    {
+      "id": "cnm_p063",
+      "name": "经过时间",
+      "grade": 2
+    },
+    {
+      "id": "cnm_p111",
+      "name": "常见数量关系",
+      "grade": 4
+    },
+    {
+      "id": "cnm_p112",
+      "name": "整数四则混合运算",
+      "grade": 4
+    },
+    {
+      "id": "cnm_p146",
+      "name": "列方程解决实际问题",
+      "grade": 5
+    },
+    {
+      "id": "cnm_p159",
+      "name": "最小公倍数",
+      "grade": 5
+    },
+    {
+      "id": "cnm_p163",
+      "name": "长方体和正方体的体积",
+      "grade": 5
+    },
+    {
+      "id": "cnm_p164",
+      "name": "容积",
+      "grade": 5
+    },
+    {
+      "id": "cnm_p165",
+      "name": "分数的意义",
+      "grade": 5
+    },
+    {
+      "id": "cnm_p174",
+      "name": "分数加减混合",
+      "grade": 5
+    },
+    {
+      "id": "cnm_p179",
+      "name": "分数乘法的应用",
+      "grade": 6
+    },
+    {
+      "id": "cnm_p183",
+      "name": "分数除法",
+      "grade": 6
+    },
+    {
+      "id": "cnm_p184",
+      "name": "分数除法的应用",
+      "grade": 6
+    },
+    {
+      "id": "cnm_p185",
+      "name": "比的意义",
+      "grade": 6
+    },
+    {
+      "id": "cnm_p187",
+      "name": "按比分配",
+      "grade": 6
+    },
+    {
+      "id": "cnm_p196",
+      "name": "求一个数的百分之几",
+      "grade": 6
+    },
+    {
+      "id": "cnm_p214",
+      "name": "反比例",
+      "grade": 6
+    }
+  ],
+  "mismatch_note": "教材五年级编排是竞赛课程进度，不能直接视为课程图谱中的五年级先修已足够。"
+}

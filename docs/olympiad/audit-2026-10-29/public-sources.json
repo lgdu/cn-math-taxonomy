@@ -1,0 +1,86 @@
+[
+  {
+    "id": "S0",
+    "title": "北京市教委2026年入学工作意见",
+    "url": "https://www.beijing.gov.cn/cs/gncs/zcwj/202604/t20260422_4603178.html",
+    "role": "用于限定结论：免试入学，禁止依据考试/竞赛证书及评测选拔；不提供所谓官方点招考纲。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S1",
+    "title": "NRICH Remainders，7–14岁",
+    "url": "https://nrich.maths.org/problems/remainders",
+    "role": "多种余数条件、公倍数和平移的代表；正文只归纳方法。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S2",
+    "title": "NRICH Take Three From Five",
+    "url": "https://nrich.maths.org/problems/take-three-five",
+    "role": "余数分组、分类及抽屉原理结合的代表；奇偶不变量行使用的是审查者构造的迁移目标。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S3",
+    "title": "NRICH Walk and Ride，7–14岁",
+    "url": "https://nrich.maths.org/problems/walk-and-ride",
+    "role": "车辆往返与步行者同时运动；相对速度和分段时间轴。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S4",
+    "title": "University of Regina Math Central：双水龙头",
+    "url": "https://mathcentral.uregina.ca/QQ/database/QQ.09.08/h/murray1.html",
+    "role": "合作速率关系的参照；原题需更高代数，不作为小学难度标尺。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S5",
+    "title": "Math Kangaroo USA 2025样题，5–6年级4分题，第5页",
+    "url": "https://mathkangaroo.org/mks/wp-content/uploads/2025/04/2025-MK-Sample-Questions.pdf",
+    "role": "在数字不重复条件下优化中间数，说明限制枚举与极值需要组合使用。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S6",
+    "title": "MATHCOUNTS Mini #7，教练版第1–2页",
+    "url": "https://mathcounts.org/sites/default/files/Counting_Paths_Along_a_Grid_(C).pdf",
+    "role": "格点路径、必经点和字母排列的一一对应；两两配对行的方法延伸是审查者选取。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S7",
+    "title": "NRICH 1 Step 2 Step，11–14岁",
+    "url": "https://nrich.maths.org/problems/1-step-2-step",
+    "role": "台阶路径递推和起始条件。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S8",
+    "title": "Math Kangaroo USA 2024样题，3–4年级5分题，第3–4页",
+    "url": "https://mathkangaroo.org/mks/wp-content/uploads/2024/04/2024-MK-Sample-Questions.pdf",
+    "role": "两类属性交集；只作低年级先修参照，三集合是拟扩展目标。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S9",
+    "title": "UKMT JMC 2024，第17题及第23题",
+    "url": "https://ukmt.org.uk/wp-content/uploads/2024/04/JMC-2024-Question-Paper-4.pdf",
+    "role": "面积关系与几何条件推断；年龄范围为Year 8或以下，不等同中国五六年级。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S10",
+    "title": "UKMT JMC 2024，第22题、第25题",
+    "url": "https://ukmt.org.uk/wp-content/uploads/2024/04/JMC-2024-Question-Paper-4.pdf",
+    "role": "等量代换链、不同人群比例联立的综合代表。",
+    "accessed": "2026-10-29"
+  },
+  {
+    "id": "S11",
+    "title": "Math Kangaroo USA 2024，5–6年级5分题，第5页",
+    "url": "https://mathkangaroo.org/mks/wp-content/uploads/2024/04/2024-MK-Sample-Questions.pdf",
+    "role": "相邻矩形面积与边长约束；2022年5–6年级4分题另可用于体积守恒。",
+    "accessed": "2026-10-29"
+  }
+]

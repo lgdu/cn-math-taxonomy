@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-29",
+  "upstream_primary_graph": {
+    "dangling_edges": 0,
+    "cycles": 0,
+    "note": "结构检查通过不表示先修边在教学上正确"
+  },
+  "original_examples": {
+    "count": 9,
+    "checks": [
+      "区间穷举",
+      "分段距离回代",
+      "有理数工作量",
+      "三位偶数独立穷举",
+      "禁入台阶路径独立递归",
+      "非垂直中线坐标面积",
+      "转移比例整数穷举",
+      "抽屉证明与临界反例",
+      "奇偶变化全分类"
+    ],
+    "teacher_reviewed": false
+  },
+  "reference_integrity": "扩展所有先修ID存在；扩展ID唯一；步骤依赖只指向已出现步骤；原图未写入"
+}

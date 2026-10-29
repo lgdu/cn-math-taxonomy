@@ -1,0 +1,398 @@
+{
+  "version": "0.1",
+  "questions": [
+    {
+      "id": "ext.olymp.work.q001",
+      "capability_ids": [
+        "ext.olymp.work.unit_rate"
+      ],
+      "prompt": "两台机器分别独立加工同一批零件，甲需9小时，乙需18小时。两机效率恒定且合作互不影响，同时开工，完成这批零件要几小时？",
+      "answer": 6,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "claim": "把整批任务设为18份，甲每小时2份，乙每小时1份。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "claim": "合作每小时3份，18÷3=6小时。"
+        }
+      ],
+      "model_for_validation": {
+        "kind": "cooperate",
+        "times": [
+          9,
+          18
+        ]
+      },
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "calibration": "uncalibrated"
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "source_problem_ids": [],
+        "note": "新编通用方法题，不宣称题型历史唯一，不代表教材授权或教师审核"
+      }
+    },
+    {
+      "id": "ext.olymp.q003",
+      "capability_ids": [
+        "ext.olymp.work.unit_rate",
+        "ext.olymp.work.phases"
+      ],
+      "prompt": "甲独做一项任务需12天，乙独做需18天，效率恒定且合作互不影响。甲先独做2天，之后甲乙合作至完成。从甲开工算共用几天？",
+      "answer": 8,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.work.unit_rate",
+          "claim": "甲先完成1/6，剩5/6。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.work.unit_rate",
+          "claim": "合作每天完成1/12+1/18=5/36。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.work.unit_rate",
+          "claim": "剩余任务需6天，加最初2天共8天。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 3,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "把12和18相加作为合作耗时",
+        "遗漏独做阶段"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现",
+        "reuse": "复用此前审查包的原创样题ext.olymp.q003，不冒充本次新增题"
+      },
+      "visual_plan": "任务条按1/36划格，甲每天3格、乙2格，先独做再合作。"
+    },
+    {
+      "id": "ext.olymp.work.q003",
+      "capability_ids": [
+        "ext.olymp.work.inverse_rate"
+      ],
+      "prompt": "甲独自完成一批任务需15小时，甲乙合作需6小时，效率恒定且互不影响。乙独自完成需要几小时？",
+      "answer": 10,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "claim": "总量设30份，甲每小时2份，合作每小时5份。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "claim": "乙每小时3份，独做需30÷3=10小时。"
+        }
+      ],
+      "model_for_validation": {
+        "kind": "inverse",
+        "a": 15,
+        "together": 6
+      },
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "calibration": "uncalibrated"
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "source_problem_ids": [],
+        "note": "新编通用方法题，不宣称题型历史唯一，不代表教材授权或教师审核"
+      }
+    },
+    {
+      "id": "ext.olymp.work.q004",
+      "capability_ids": [
+        "ext.olymp.work.cycles"
+      ],
+      "prompt": "甲独做需8小时，乙独做需12小时，二人效率恒定。从甲开始轮流工作，每人每次最多连续工作1小时，随后立即换人，任务完成就停止。共需多少小时？",
+      "answer": "19/2",
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "claim": "每2小时完成1/8+1/12=5/24。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "claim": "4个周期共8小时，完成5/6，剩1/6。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "claim": "甲再做1小时完成1/8，剩1/24；乙再做1/2小时。"
+        },
+        {
+          "id": "s4",
+          "depends_on": [
+            "s3"
+          ],
+          "claim": "总计9.5小时，即9小时30分钟。"
+        }
+      ],
+      "model_for_validation": {
+        "kind": "alternate",
+        "a": 8,
+        "b": 12,
+        "turn_hours": 1
+      },
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "calibration": "uncalibrated"
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "source_problem_ids": [],
+        "note": "新编通用方法题，不宣称题型历史唯一，不代表教材授权或教师审核"
+      }
+    },
+    {
+      "id": "ext.olymp.work.q005",
+      "capability_ids": [
+        "ext.olymp.work.continuous_source"
+      ],
+      "prompt": "水箱持续以未知的恒定速度进水。只开每分钟抽18升的泵，从同一初始水位抽空需30分钟；只开每分钟抽25升的泵则需20分钟。两次初始水量相同，泵运行期间一直进水。求进水速度和初始水量。",
+      "answer": {
+        "inflow_L_per_min": 4,
+        "initial_L": 420
+      },
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "claim": "设进水速度r升/分钟，两方案初始存量相等。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "claim": "(18-r)×30=(25-r)×20，得r=4。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "claim": "初始水量为(18-4)×30=420升。"
+        }
+      ],
+      "model_for_validation": {
+        "kind": "source",
+        "outflows": [
+          18,
+          25
+        ],
+        "durations": [
+          30,
+          20
+        ]
+      },
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "calibration": "uncalibrated"
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "source_problem_ids": [],
+        "note": "新编通用方法题，不宣称题型历史唯一，不代表教材授权或教师审核"
+      }
+    },
+    {
+      "id": "ext.olymp.work.q006",
+      "capability_ids": [
+        "ext.olymp.work.level_events"
+      ],
+      "prompt": "一个空的长方体水箱容积90升，进水管每分钟注水6升。排水孔在箱高的1/3处；水面超过孔口后，排水速度恒为每分钟2升，否则不排水。从空箱开始，同时保持进水管和排水孔开启，几分钟注满？",
+      "answer": 20,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "claim": "等截面水箱的1/3高度对应30升；此前无排水。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "claim": "先注30升，用5分钟。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "claim": "超过孔口后净进水每分钟4升，剩60升需15分钟。"
+        },
+        {
+          "id": "s4",
+          "depends_on": [
+            "s3"
+          ],
+          "claim": "共20分钟。"
+        }
+      ],
+      "model_for_validation": {
+        "kind": "level",
+        "capacity": 90,
+        "threshold_fraction": "1/3",
+        "inflow": 6,
+        "outflow": 2
+      },
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "calibration": "uncalibrated"
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "source_problem_ids": [],
+        "note": "新编通用方法题，不宣称题型历史唯一，不代表教材授权或教师审核"
+      }
+    },
+    {
+      "id": "ext.olymp.work.q007",
+      "capability_ids": [
+        "ext.olymp.work.rate_change"
+      ],
+      "prompt": "一批120件零件，甲原来每小时加工12件，调整后效率提高25%；乙每小时加工5件，效率不变。两人合作互不影响。调整后甲独做需几小时？调整后的甲与乙合作需几小时？",
+      "answer": {
+        "A_alone_h": 8,
+        "together_h": 6
+      },
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "claim": "甲调整后每小时12×1.25=15件。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "claim": "独做120÷15=8小时；合作120÷(15+5)=6小时。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "claim": "效率提高25%时，时间应除以1.25，不能直接减少25%。"
+        }
+      ],
+      "model_for_validation": {
+        "kind": "rate_change",
+        "total": 120,
+        "a": 12,
+        "b": 5,
+        "increase": "1/4"
+      },
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "calibration": "uncalibrated"
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "source_problem_ids": [],
+        "note": "新编通用方法题，不宣称题型历史唯一，不代表教材授权或教师审核"
+      }
+    },
+    {
+      "id": "ext.olymp.work.q008",
+      "capability_ids": [
+        "ext.olymp.work.contribution"
+      ],
+      "prompt": "甲每小时完成9件，乙每小时完成6件。甲先独做2小时，再与乙合作3小时，恰好完成整批任务。两人效率恒定。约定按实际完成件数分配630元报酬，各得多少元？",
+      "answer": {
+        "A_yuan": 450,
+        "B_yuan": 180
+      },
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "claim": "甲完成9×5=45件，乙完成6×3=18件，共63件。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "claim": "每件对应10元报酬，甲450元，乙180元。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "claim": "不能直接用效率比3:2分配，因为工作时间不同。"
+        }
+      ],
+      "model_for_validation": {
+        "kind": "contribution",
+        "rates": [
+          9,
+          6
+        ],
+        "hours": [
+          5,
+          3
+        ],
+        "pay": 630
+      },
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "calibration": "uncalibrated"
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "source_problem_ids": [],
+        "note": "新编通用方法题，不宣称题型历史唯一，不代表教材授权或教师审核"
+      }
+    }
+  ],
+  "scope": "8道种子题，其中1道复用此前原创，另外7道本次新编；不是完整题库或已校准的选拔模拟卷。"
+}

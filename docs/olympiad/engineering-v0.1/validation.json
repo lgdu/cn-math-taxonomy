@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "method_ids": 14,
+  "source_items": 32,
+  "seed_questions": 8,
+  "independently_checked_seed_answers": 8,
+  "hero_timeline_checkpoints": 97,
+  "integer_fraction_equivalence": "passed",
+  "graph_cycles": 0,
+  "course_refs_checked_against_upstream": true,
+  "teacher_reviewed": false,
+  "scope_limit": "仅验证数学、引用与状态契约；不验证教学效果，也未实现动画或学生诊断引擎。"
+}

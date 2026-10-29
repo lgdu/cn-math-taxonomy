@@ -1,0 +1,101 @@
+{
+  "version": "0.1",
+  "question_id": "ext.olymp.q003",
+  "route_choice": {
+    "integer_total": "总任务36份，甲3份/天，乙2份/天",
+    "unit_one": "总任务1项，甲1/12项/天，乙1/18项/天",
+    "grading": "两种都合法，选择本身不计对错"
+  },
+  "checkpoints": [
+    {
+      "id": "d1",
+      "step": "先做阶段",
+      "method_id": "ext.olymp.work.phases",
+      "prompt": "甲先独做2天，已完成多少？",
+      "expected": {
+        "integer_total": "6",
+        "unit_one": "1/6"
+      },
+      "unit": {
+        "integer_total": "任务份",
+        "unit_one": "整项任务"
+      },
+      "wrong_response": "先只看甲独做的一段。每天的完成量乘2天，合作此时还没有开始。",
+      "next_probe": "如果甲每天完成3份，2天完成几份？"
+    },
+    {
+      "id": "d2",
+      "step": "剩余量",
+      "method_id": "ext.olymp.work.phases",
+      "prompt": "两人开始合作时，还剩多少？",
+      "expected": {
+        "integer_total": "30",
+        "unit_one": "5/6"
+      },
+      "unit": {
+        "integer_total": "任务份",
+        "unit_one": "整项任务"
+      },
+      "wrong_response": "从总量中扣除甲已完成的部分，再检查“已完成＋剩余＝总量”。",
+      "next_probe": "总量36份，已经完成6份，剩多少份？"
+    },
+    {
+      "id": "d3",
+      "step": "合作效率",
+      "method_id": "ext.olymp.work.unit_rate",
+      "prompt": "两人合作，每天完成多少？",
+      "expected": {
+        "integer_total": "5",
+        "unit_one": "5/36"
+      },
+      "unit": {
+        "integer_total": "份/天",
+        "unit_one": "项/天"
+      },
+      "wrong_response": "两人同一天各完成一部分，应相加每天的完成量。不能相加独做需要的天数。",
+      "next_probe": "甲每天3份、乙每天2份，一天合计几份？"
+    },
+    {
+      "id": "d4",
+      "step": "合作时长",
+      "method_id": "ext.olymp.work.phases",
+      "prompt": "剩余部分需要合作几天？",
+      "expected": {
+        "integer_total": "6",
+        "unit_one": "6"
+      },
+      "unit": {
+        "integer_total": "天",
+        "unit_one": "天"
+      },
+      "wrong_response": "用剩余任务量除以每天合作完成量，注意两者使用同一总量单位。",
+      "next_probe": "30份任务，每天做5份，需要几天？"
+    },
+    {
+      "id": "d5",
+      "step": "回答题目",
+      "method_id": "ext.olymp.work.phases",
+      "prompt": "题目问从甲开始算总共几天，应该填多少？",
+      "expected": {
+        "integer_total": "8",
+        "unit_one": "8"
+      },
+      "unit": {
+        "integer_total": "天",
+        "unit_one": "天"
+      },
+      "wrong_response": "合作时长只是后一段，题目还包含最初甲独做的2天。",
+      "next_probe": "先独做2天，再合作6天，总共几天？"
+    }
+  ],
+  "policy": {
+    "default_state": "not_assessed",
+    "correct_once": "该步骤出现一次正确证据；不等同方法已掌握",
+    "wrong_once": "标记此处需要澄清；只记录候选原因，不能凭一个数字断言认知缺陷",
+    "probe_correct": "提示后正确，记录scaffolded_correct，安排无提示迁移题",
+    "mastery": "本版不自动认证掌握；需不同情境无提示迁移及教师制定的标准",
+    "upstream_propagation": "none",
+    "equivalence": "用有理数比较，接受等价分数；单位由字段约束，不执行用户代码"
+  },
+  "transfer_question": "完成后使用种子题q003反求效率，再用q004轮流工作检测边界；不能仅换数字便认为迁移完成。"
+}

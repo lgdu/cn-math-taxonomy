@@ -1,0 +1,1004 @@
+{
+  "version": "0.1",
+  "namespace": "ext.olymp.work",
+  "upstream": {
+    "repository": "lgdu/cn-math-taxonomy",
+    "commit": "c71ca266cf360827c0a24f31db99c2b156ba70e1",
+    "mutation": "none"
+  },
+  "previous_extension": {
+    "file": "extension-proposal.json",
+    "relation": "保留旧ID及旧定义，新增独立路线元数据，不写回旧包"
+  },
+  "source": {
+    "id": "source.gaosi.g5.ch17",
+    "title": "高思学校竞赛数学导引·五年级",
+    "chapter": "第17讲 工程问题",
+    "printed_pages": [
+      106,
+      113
+    ],
+    "pdf_pages_1_based": [
+      119,
+      126
+    ],
+    "solution_printed_pages": [
+      239,
+      243
+    ],
+    "solution_pdf_pages_1_based": [
+      252,
+      256
+    ],
+    "inspection": "逐页查阅本讲8页及对应答案5页；32道编号主项的方法标引，不等同于32题全部独立盲解",
+    "copy_policy": "仅保留页码、题号及审查者自写的方法摘要，不附原题、原解析、扫描页或教材授权声明"
+  },
+  "capabilities": [
+    {
+      "id": "ext.olymp.work.unit_rate",
+      "short_id": "M01",
+      "kind": "capability",
+      "name": "总量、效率与合作",
+      "model": "把不同完成时间转换成同一任务单位下的效率，再相加。",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p174",
+          "cnm_p183",
+          "cnm_p111"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能解释相加的是效率，不是独做时间。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p111",
+          "name": "常见数量关系",
+          "grade": 4
+        },
+        {
+          "id": "cnm_p159",
+          "name": "最小公倍数",
+          "grade": 5
+        },
+        {
+          "id": "cnm_p112",
+          "name": "整数四则混合运算",
+          "grade": 4
+        },
+        {
+          "id": "cnm_p174",
+          "name": "分数加减混合",
+          "grade": 5
+        },
+        {
+          "id": "cnm_p179",
+          "name": "分数乘法的应用",
+          "grade": 6
+        },
+        {
+          "id": "cnm_p183",
+          "name": "分数除法",
+          "grade": 6
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis",
+      "prior_declaration_preserved": true
+    },
+    {
+      "id": "ext.olymp.work.phases",
+      "short_id": "M02",
+      "kind": "capability",
+      "name": "分段时间与累计工作量",
+      "model": "以加入、退出、停工为边界，逐段累加完成量。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.unit_rate",
+          "cnm_p063"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能分别给出每段时长、参与者、完成量及剩余量。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p063",
+          "name": "经过时间",
+          "grade": 2
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.inverse_rate",
+      "short_id": "M03",
+      "kind": "capability",
+      "name": "从剩余量或时间差反求效率",
+      "model": "用相同总量或不同方案的差量建立关系。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.unit_rate",
+          "ext.olymp.work.phases"
+        ],
+        "any_of_paths": [
+          [
+            "cnm_p146"
+          ],
+          [
+            "cnm_p112",
+            "cnm_p184"
+          ]
+        ]
+      },
+      "success_criteria": [
+        "能指出比较方案中相同与变化的部分。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p146",
+          "name": "列方程解决实际问题",
+          "grade": 5
+        },
+        {
+          "id": "cnm_p112",
+          "name": "整数四则混合运算",
+          "grade": 4
+        },
+        {
+          "id": "cnm_p184",
+          "name": "分数除法的应用",
+          "grade": 6
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.cycles",
+      "short_id": "M04",
+      "kind": "capability",
+      "name": "轮流工作与休息周期",
+      "model": "先算完整周期，再逐段处理尾部，检查终点提前停止。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.phases",
+          "cnm_p050"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能区分日历时间、工作时间，并检查末周期不能平均摊分。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p050",
+          "name": "有余数除法的意义",
+          "grade": 2
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.person_time",
+      "short_id": "M05",
+      "kind": "capability",
+      "name": "同质工人的人时与人天",
+      "model": "在每人效率相同条件下，把人数和有效工时相乘。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.unit_rate",
+          "cnm_p214"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能明确同质效率假设，不能无条件把人数和工效等同。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p214",
+          "name": "反比例",
+          "grade": 6
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.task_switch",
+      "short_id": "M06",
+      "kind": "capability",
+      "name": "多个任务与人员/机器切换",
+      "model": "对每个任务分别记录工作量和不同组合的效率。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.phases",
+          "cnm_p185"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能保证切换前后各任务均不超做、不漏做。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p185",
+          "name": "比的意义",
+          "grade": 6
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.net_flow",
+      "short_id": "M07",
+      "kind": "capability",
+      "name": "进出并存与净效率",
+      "model": "约定正负方向，将增加量与减少量放入同一守恒式。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.unit_rate",
+          "ext.olymp.work.phases",
+          "cnm_p164"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能检查净效率符号，并说明能否达到目标。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p164",
+          "name": "容积",
+          "grade": 5
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.contribution",
+      "short_id": "M08",
+      "kind": "capability",
+      "name": "按实际贡献分配",
+      "model": "先算各人实际完成量，再按约定比例分配报酬。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.phases",
+          "cnm_p187"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能区分效率比、工作时长比和实际贡献比。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p187",
+          "name": "按比分配",
+          "grade": 6
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.rate_change",
+      "short_id": "M09",
+      "kind": "capability",
+      "name": "效率变化与干扰",
+      "model": "把百分比作用于正确对象，允许机器与操作者共同决定效率。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.unit_rate",
+          "ext.olymp.work.phases",
+          "cnm_p196"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能区分效率提高25%与完成时间减少25%。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p196",
+          "name": "求一个数的百分之几",
+          "grade": 6
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.minimum_overlap",
+      "short_id": "M10",
+      "kind": "capability",
+      "name": "最少合作时间",
+      "model": "先建立极限最快方案，再证明补充参与量的必要性和可行性。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.phases",
+          "ext.olymp.work.inverse_rate"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "下界与可实施安排都成立，才说明最少。"
+      ],
+      "upstream_refs": [],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.continuous_source",
+      "short_id": "M11",
+      "kind": "capability",
+      "name": "持续补入与队列",
+      "model": "同时考虑服务/消耗与持续新增量，通过两方案反求。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.inverse_rate",
+          "ext.olymp.work.net_flow"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能把库存变化写为流入减流出，检查开始与结束边界。"
+      ],
+      "upstream_refs": [],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.pairwise_rates",
+      "short_id": "M12",
+      "kind": "capability",
+      "name": "由两两合作求个体效率",
+      "model": "把两两效率式合并，再扣除对应项。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.unit_rate"
+        ],
+        "any_of_paths": [
+          [
+            "cnm_p146"
+          ],
+          [
+            "cnm_p174",
+            "cnm_p183"
+          ]
+        ]
+      },
+      "success_criteria": [
+        "能说明三组和为何把每人效率算了两次。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p146",
+          "name": "列方程解决实际问题",
+          "grade": 5
+        },
+        {
+          "id": "cnm_p174",
+          "name": "分数加减混合",
+          "grade": 5
+        },
+        {
+          "id": "cnm_p183",
+          "name": "分数除法",
+          "grade": 6
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.level_events",
+      "short_id": "M13",
+      "kind": "capability",
+      "name": "水位触发的分段模型",
+      "model": "根据孔口高度决定排水何时开始，逐段更新净效率。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.phases",
+          "ext.olymp.work.net_flow",
+          "cnm_p163",
+          "cnm_p165"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能将高度比转为体积比，并声明等截面与恒定流速假设。"
+      ],
+      "upstream_refs": [
+        {
+          "id": "cnm_p163",
+          "name": "长方体和正方体的体积",
+          "grade": 5
+        },
+        {
+          "id": "cnm_p165",
+          "name": "分数的意义",
+          "grade": 5
+        }
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    },
+    {
+      "id": "ext.olymp.work.condition_branches",
+      "short_id": "M14",
+      "kind": "capability",
+      "name": "未定条件的分类讨论",
+      "model": "对未指明的阈值或情形分支求解，再检验各分支可行性。",
+      "prerequisites": {
+        "all_of": [
+          "ext.olymp.work.level_events"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "能识别题目是否可唯一确定，不强行把多个合法结果压成一个答案。"
+      ],
+      "upstream_refs": [],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "origin": "new_design_from_method_analysis"
+    }
+  ],
+  "learning_routes": [
+    {
+      "id": "route.work.integer_total",
+      "name": "整数总量法",
+      "method_id": "ext.olymp.work.unit_rate",
+      "requires": [
+        "cnm_p111",
+        "cnm_p112",
+        "cnm_p159"
+      ],
+      "status": "proposed_alternative_route",
+      "note": "不以先通过原unit_rate全部分数先修为入口；路线独立评价，不反推其分数能力已掌握。"
+    },
+    {
+      "id": "route.work.unit_one",
+      "name": "总量设1法",
+      "method_id": "ext.olymp.work.unit_rate",
+      "requires": [
+        "cnm_p111",
+        "cnm_p174",
+        "cnm_p179",
+        "cnm_p183"
+      ],
+      "status": "proposed_alternative_route",
+      "note": "分数意义、加减、乘除都需观测；不能因教材标五年级而忽略图谱中的六年级前置。"
+    }
+  ],
+  "textbook_index": [
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 1,
+      "printed_page": 106,
+      "pdf_page_1_based": 119,
+      "method_ids": [
+        "ext.olymp.work.unit_rate"
+      ],
+      "review_summary": "共同总量下的效率相加",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 2,
+      "printed_page": 106,
+      "pdf_page_1_based": 119,
+      "method_ids": [
+        "ext.olymp.work.unit_rate",
+        "ext.olymp.work.phases"
+      ],
+      "review_summary": "合作与先后开工；含两个小问",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 3,
+      "printed_page": 107,
+      "pdf_page_1_based": 120,
+      "method_ids": [
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "已知合作效率与一人效率，反求另一人",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 4,
+      "printed_page": 107,
+      "pdf_page_1_based": 120,
+      "method_ids": [
+        "ext.olymp.work.phases",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "由实际完成量反求休息时长",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 5,
+      "printed_page": 107,
+      "pdf_page_1_based": 120,
+      "method_ids": [
+        "ext.olymp.work.phases",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "已知部分工作量，反求个体效率",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 6,
+      "printed_page": 107,
+      "pdf_page_1_based": 120,
+      "method_ids": [
+        "ext.olymp.work.cycles"
+      ],
+      "review_summary": "交替作业及最后不完整时段",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 7,
+      "printed_page": 107,
+      "pdf_page_1_based": 120,
+      "method_ids": [
+        "ext.olymp.work.person_time",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "人数变化与每人效率反推",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 8,
+      "printed_page": 107,
+      "pdf_page_1_based": 120,
+      "method_ids": [
+        "ext.olymp.work.task_switch"
+      ],
+      "review_summary": "两个任务与人员切换",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 9,
+      "printed_page": 108,
+      "pdf_page_1_based": 121,
+      "method_ids": [
+        "ext.olymp.work.net_flow",
+        "ext.olymp.work.phases"
+      ],
+      "review_summary": "先单向进水，再进排并行",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "兴趣篇",
+      "question_number": 10,
+      "printed_page": 108,
+      "pdf_page_1_based": 121,
+      "method_ids": [
+        "ext.olymp.work.contribution"
+      ],
+      "review_summary": "实际工作贡献与报酬分配",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 1,
+      "printed_page": 108,
+      "pdf_page_1_based": 121,
+      "method_ids": [
+        "ext.olymp.work.unit_rate",
+        "ext.olymp.work.phases",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "合作、退出及剩余工作；含两个小问",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 2,
+      "printed_page": 108,
+      "pdf_page_1_based": 121,
+      "method_ids": [
+        "ext.olymp.work.rate_change",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "合作存在干扰，反推总量",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 3,
+      "printed_page": 108,
+      "pdf_page_1_based": 121,
+      "method_ids": [
+        "ext.olymp.work.phases",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "三人合作中的中途退出",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 4,
+      "printed_page": 109,
+      "pdf_page_1_based": 122,
+      "method_ids": [
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "计划与实际用时差的关系",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 5,
+      "printed_page": 109,
+      "pdf_page_1_based": 122,
+      "method_ids": [
+        "ext.olymp.work.cycles",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "交替起始顺序变化与尾段",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 6,
+      "printed_page": 109,
+      "pdf_page_1_based": 122,
+      "method_ids": [
+        "ext.olymp.work.task_switch"
+      ],
+      "review_summary": "工作量比例与多任务切换",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 7,
+      "printed_page": 109,
+      "pdf_page_1_based": 122,
+      "method_ids": [
+        "ext.olymp.work.person_time",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "半天与分组形成的人时关系",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 8,
+      "printed_page": 110,
+      "pdf_page_1_based": 123,
+      "method_ids": [
+        "ext.olymp.work.minimum_overlap"
+      ],
+      "review_summary": "限期完成下的最少合作时长",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 9,
+      "printed_page": 110,
+      "pdf_page_1_based": 123,
+      "method_ids": [
+        "ext.olymp.work.phases",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "多流入管中途关闭的时间反推",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 10,
+      "printed_page": 110,
+      "pdf_page_1_based": 123,
+      "method_ids": [
+        "ext.olymp.work.continuous_source"
+      ],
+      "review_summary": "持续流入与排空方案比较",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 11,
+      "printed_page": 110,
+      "pdf_page_1_based": 123,
+      "method_ids": [
+        "ext.olymp.work.net_flow",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "净流量关系与初始存量",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 12,
+      "printed_page": 111,
+      "pdf_page_1_based": 124,
+      "method_ids": [
+        "ext.olymp.work.continuous_source"
+      ],
+      "review_summary": "持续到达的排队与服务关系",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 13,
+      "printed_page": 111,
+      "pdf_page_1_based": 124,
+      "method_ids": [
+        "ext.olymp.work.pairwise_rates",
+        "ext.olymp.work.contribution"
+      ],
+      "review_summary": "两两合作信息、个体贡献与报酬",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "拓展篇",
+      "question_number": 14,
+      "printed_page": 111,
+      "pdf_page_1_based": 124,
+      "method_ids": [
+        "ext.olymp.work.level_events"
+      ],
+      "review_summary": "固定孔高触发排水的分段过程",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "超越篇",
+      "question_number": 1,
+      "printed_page": 111,
+      "pdf_page_1_based": 124,
+      "method_ids": [
+        "ext.olymp.work.cycles"
+      ],
+      "review_summary": "周期休息与真实日历时间",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "超越篇",
+      "question_number": 2,
+      "printed_page": 112,
+      "pdf_page_1_based": 125,
+      "method_ids": [
+        "ext.olymp.work.net_flow",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "不同管组与未满时的存量反推",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "超越篇",
+      "question_number": 3,
+      "printed_page": 112,
+      "pdf_page_1_based": 125,
+      "method_ids": [
+        "ext.olymp.work.task_switch",
+        "ext.olymp.work.rate_change"
+      ],
+      "review_summary": "机器与操作者互换形成效率表",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "超越篇",
+      "question_number": 4,
+      "printed_page": 112,
+      "pdf_page_1_based": 125,
+      "method_ids": [
+        "ext.olymp.work.rate_change",
+        "ext.olymp.work.pairwise_rates",
+        "ext.olymp.work.contribution"
+      ],
+      "review_summary": "退出后的效率变化与贡献分配",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "超越篇",
+      "question_number": 5,
+      "printed_page": 112,
+      "pdf_page_1_based": 125,
+      "method_ids": [
+        "ext.olymp.work.level_events",
+        "ext.olymp.work.condition_branches"
+      ],
+      "review_summary": "孔高未定，需要分支并检查可行性",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "超越篇",
+      "question_number": 6,
+      "printed_page": 113,
+      "pdf_page_1_based": 126,
+      "method_ids": [
+        "ext.olymp.work.level_events",
+        "ext.olymp.work.task_switch"
+      ],
+      "review_summary": "两个容器的孔高阈值与联动",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "超越篇",
+      "question_number": 7,
+      "printed_page": 113,
+      "pdf_page_1_based": 126,
+      "method_ids": [
+        "ext.olymp.work.level_events",
+        "ext.olymp.work.inverse_rate"
+      ],
+      "review_summary": "多个孔口触发及净流量反推",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    },
+    {
+      "source_id": "source.gaosi.g5.ch17",
+      "band": "超越篇",
+      "question_number": 8,
+      "printed_page": 113,
+      "pdf_page_1_based": 126,
+      "method_ids": [
+        "ext.olymp.work.phases",
+        "ext.olymp.work.inverse_rate",
+        "ext.olymp.work.rate_change"
+      ],
+      "review_summary": "返工、延期、工作份额与效率关系",
+      "mapping_status": "ai_draft",
+      "teacher_reviewed": false,
+      "independent_blind_solution": "not_claimed"
+    }
+  ],
+  "interpretation": "all_of要求全部满足，非空any_of_paths至少满足一条；learning_routes提供独立评价入口，不能绕过后续能力真实必需的基础。路线和扩展掌握状态不向原图反向传播。",
+  "coverage_limit": "本讲工程专题方法标引，不代表三至六年级四册已完成逐题建图。",
+  "review": {
+    "status": "ai_draft",
+    "teacher_reviewed": false
+  },
+  "prerequisite_enforcement": "advisory_not_executable",
+  "route_resolution_note": "方法前置是待审核建议，不直接作为运行时硬门槛。整数路线只记录该路线下的操作证据，不把旧unit_rate的分数先修推断为已掌握。未来接入引擎时按题目和路线显式配置入口。"
+}

@@ -1,0 +1,736 @@
+{
+  "schema_version": "0.1",
+  "namespace": "ext.olymp",
+  "upstream": {
+    "repository": "lgdu/cn-math-taxonomy",
+    "commit": "c71ca266cf360827c0a24f31db99c2b156ba70e1",
+    "read_only": true
+  },
+  "difficulty_rubric": {
+    "1": "直接识别与计算",
+    "2": "单一模型、多步执行",
+    "3": "非直接建模或跨知识迁移",
+    "4": "完备分类、保证性或不可能性证明；不表示经统计验证的竞赛等级"
+  },
+  "capabilities": [
+    {
+      "id": "ext.olymp.nt.remainders",
+      "kind": "capability",
+      "name": "余数条件到周期约束",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p050",
+          "cnm_p159"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "把余数条件改写为平移后的整除条件，说明解的周期与范围。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    },
+    {
+      "id": "ext.olymp.motion.relative",
+      "kind": "capability",
+      "name": "相对运动与阶段时间轴",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p111",
+          "cnm_p063"
+        ],
+        "any_of_paths": [
+          [
+            "cnm_p146"
+          ],
+          [
+            "cnm_p112"
+          ]
+        ]
+      },
+      "success_criteria": [
+        "划分同时运动阶段，构造剩余距离与速度和/差。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    },
+    {
+      "id": "ext.olymp.work.unit_rate",
+      "kind": "capability",
+      "name": "单位工作量与分段合作",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p174",
+          "cnm_p183",
+          "cnm_p111"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "总量设1，按人、按阶段累加工作量，检验效率恒定条件。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    },
+    {
+      "id": "ext.olymp.count.constraints",
+      "kind": "capability",
+      "name": "有限对象的分类计数",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p095"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "定义有序/无序对象，按互斥类别计数并证明没有遗漏。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    },
+    {
+      "id": "ext.olymp.count.recurrence",
+      "kind": "capability",
+      "name": "状态递推与路径计数",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p060",
+          "cnm_p095"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "按最后一步划分互斥情况，给出起始状态与禁用状态。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    },
+    {
+      "id": "ext.olymp.geom.area_ratio",
+      "kind": "capability",
+      "name": "公共高与面积比迁移",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p148",
+          "cnm_p185"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "主动发现同高或同底，把面积关系转成线段比例。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    },
+    {
+      "id": "ext.olymp.combo.residue_pigeon",
+      "kind": "capability",
+      "name": "余数抽屉与最优保证",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p216",
+          "cnm_p050"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "自行建立余数抽屉，用反例或构造检查保证数是否最小。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    },
+    {
+      "id": "ext.olymp.model.conservation",
+      "kind": "capability",
+      "name": "量转移中的守恒建模",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p179",
+          "cnm_p184",
+          "cnm_p185"
+        ],
+        "any_of_paths": [
+          [
+            "cnm_p187"
+          ],
+          [
+            "cnm_p146"
+          ]
+        ]
+      },
+      "success_criteria": [
+        "辨别不变总量及转移方向，对齐变化前后的单位1。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    },
+    {
+      "id": "ext.olymp.nt.invariant",
+      "kind": "capability",
+      "name": "奇偶不变量与不可能性",
+      "prerequisites": {
+        "all_of": [
+          "cnm_p156"
+        ],
+        "any_of_paths": []
+      },
+      "success_criteria": [
+        "识别每次操作对奇偶的影响，并用初态终态矛盾证明不可能。"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false
+      },
+      "provenance": {
+        "origin": "new_audit_design",
+        "date": "2026-10-29",
+        "rights_status": "new_text_not_an_upstream_relicense"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "ext.olymp.q001",
+      "capability_ids": [
+        "ext.olymp.nt.remainders"
+      ],
+      "prompt": "某正整数在100到250之间（含端点），除以5余2，除以7余4，并且是3的倍数。求所有这样的数，并说明没有遗漏。",
+      "answer": [
+        102,
+        207
+      ],
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.nt.remainders",
+          "claim": "先合并前两个余数条件，得到n=32+35k。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.nt.remainders",
+          "claim": "在给定区间内候选为102、137、172、207、242。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.nt.remainders",
+          "claim": "筛选3的倍数，得102、207；相邻解相差105，区间筛选完整。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 3,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "把余数直接相乘",
+        "只找到一个解就停止"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "数轴上高亮候选等差列，再用3的倍数筛选。"
+    },
+    {
+      "id": "ext.olymp.q002",
+      "capability_ids": [
+        "ext.olymp.motion.relative"
+      ],
+      "prompt": "相距840米的两地，甲从A以每分钟60米走向B；7分钟后，乙从B以每分钟80米走向A，二人均不停车。乙出发后几分钟相遇？相遇点距A多少米？",
+      "answer": {
+        "minutes_after_B_starts": 3,
+        "distance_from_A_m": 600
+      },
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.motion.relative",
+          "claim": "乙出发时甲已走420米，剩余间距420米。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.motion.relative",
+          "claim": "同时运动时每分钟间距缩小140米，故3分钟相遇。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.motion.relative",
+          "claim": "甲共走10分钟，距A为600米；乙走240米，两段和为840米。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 3,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "直接用840除以速度和",
+        "把甲乙运动时长视为相同"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "共用时间轴，明确乙起步前静止；相遇时显示两段距离。"
+    },
+    {
+      "id": "ext.olymp.q003",
+      "capability_ids": [
+        "ext.olymp.work.unit_rate"
+      ],
+      "prompt": "甲独做一项任务需12天，乙独做需18天，效率恒定且合作互不影响。甲先独做2天，之后甲乙合作至完成。从甲开工算共用几天？",
+      "answer": 8,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.work.unit_rate",
+          "claim": "甲先完成1/6，剩5/6。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.work.unit_rate",
+          "claim": "合作每天完成1/12+1/18=5/36。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.work.unit_rate",
+          "claim": "剩余任务需6天，加最初2天共8天。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 3,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "把12和18相加作为合作耗时",
+        "遗漏独做阶段"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "任务条按1/36划格，甲每天3格、乙2格，先独做再合作。"
+    },
+    {
+      "id": "ext.olymp.q004",
+      "capability_ids": [
+        "ext.olymp.count.constraints"
+      ],
+      "prompt": "从0、1、2、3、4中选三个不同数字，组成三位偶数。一共多少个？请按末位分类，说明没有重复和遗漏。",
+      "answer": 30,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.count.constraints",
+          "claim": "末位为0时，百位4种、十位3种，共12个。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.count.constraints",
+          "claim": "末位为2或4时，各有百位3种、十位3种，各9个。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.count.constraints",
+          "claim": "三类互斥且覆盖所有偶数，共12+9+9=30个。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 3,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "允许百位为0",
+        "忽略是否重复数字"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "用树图显示末位分支，屏蔽重复数字与首位0。"
+    },
+    {
+      "id": "ext.olymp.q005",
+      "capability_ids": [
+        "ext.olymp.count.recurrence"
+      ],
+      "prompt": "从第0级到第8级台阶，每次上1级或2级，不能落在第4级。不同的步长序列视为不同走法，共有多少种？",
+      "answer": 9,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.count.recurrence",
+          "claim": "记到达第n级的方法数为f(n)，f(0)=1，不能到达的负级数为0。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.count.recurrence",
+          "claim": "f(4)=0，其他位置f(n)=f(n-1)+f(n-2)。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.count.recurrence",
+          "claim": "f(0)到f(8)依次为1、1、2、3、0、3、3、6、9，答案9。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 3,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "把跨过第4级也算违规",
+        "未定义起始状态"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "第4级标禁入，显示从前两级汇合的有向路径；允许从3跨到5。"
+    },
+    {
+      "id": "ext.olymp.q006",
+      "capability_ids": [
+        "ext.olymp.geom.area_ratio"
+      ],
+      "prompt": "三角形ABC的面积为84平方厘米，D在BC上且BD:DC=2:1，E是AD的中点。求三角形BDE的面积，并解释为什么不必知道AD的长度。",
+      "answer": 28,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.geom.area_ratio",
+          "claim": "ABD与ACD对BC有相同高，ABD占ABC的2/3，面积56。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.geom.area_ratio",
+          "claim": "BDE与BDA共用底BD，E到BC的距离是A到BC的一半。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.geom.area_ratio",
+          "claim": "所以BDE面积为56的一半，即28平方厘米。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 3,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "误用边长比的平方",
+        "把AD误当作三角形ABC的高"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "拖动A和D时保留约束；用到BC的垂距表示公共高，不把斜线AD标成高。"
+    },
+    {
+      "id": "ext.olymp.q007",
+      "capability_ids": [
+        "ext.olymp.model.conservation"
+      ],
+      "prompt": "甲乙两箱共有同一种小球若干个，原来甲乙数量比为5:2。从甲箱取12个放入乙箱后，数量比变成3:4。两箱原来共有多少个球？",
+      "answer": 42,
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.model.conservation",
+          "claim": "转移前后总数不变，甲占总数的比例由5/7变成3/7。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.model.conservation",
+          "claim": "减少的2/7总数对应12个，故总数为12÷(2/7)=42。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.model.conservation",
+          "claim": "核验：原来30和12，转移后18和24，比例为3:4。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 3,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "认为甲减12而乙不变",
+        "把5:2和3:4的比值直接相减"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "两箱间逐个移动12球，保持画面总球数不变；条形份数共7份。"
+    },
+    {
+      "id": "ext.olymp.q008",
+      "capability_ids": [
+        "ext.olymp.combo.residue_pigeon"
+      ],
+      "prompt": "任取8个互不相同的正整数，证明其中必有两个数的差是7的倍数。把8改成7，结论是否仍一定成立？",
+      "answer": {
+        "eight": "一定成立",
+        "seven": "不一定，反例1到7"
+      },
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.combo.residue_pigeon",
+          "claim": "按除以7的余数0到6分成7类。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.combo.residue_pigeon",
+          "claim": "8个数必有两个同类，同余两数相减是7的倍数。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.combo.residue_pigeon",
+          "claim": "只有7个数时可取1到7，其余数各不相同，任意差为1到6，给出反例。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 4,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "把原数大小当抽屉",
+        "找到一个实例便代替证明"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "余数盒子展示保证性；另展示1到7恰好各占一盒的反例。"
+    },
+    {
+      "id": "ext.olymp.q009",
+      "capability_ids": [
+        "ext.olymp.nt.invariant"
+      ],
+      "prompt": "3×3方格起初全为白色。每次必须选两个不同格子并把颜色各翻转一次。能否经过有限次操作使9格全为黑色？说明理由。",
+      "answer": "不能",
+      "solution_steps": [
+        {
+          "id": "s1",
+          "depends_on": [],
+          "capability_id": "ext.olymp.nt.invariant",
+          "claim": "每次翻转两格，黑格数变化只可能为-2、0或2。"
+        },
+        {
+          "id": "s2",
+          "depends_on": [
+            "s1"
+          ],
+          "capability_id": "ext.olymp.nt.invariant",
+          "claim": "所以黑格数的奇偶不变，初态为偶数0。"
+        },
+        {
+          "id": "s3",
+          "depends_on": [
+            "s2"
+          ],
+          "capability_id": "ext.olymp.nt.invariant",
+          "claim": "目标黑格数9为奇数，与不变量矛盾，故不能达到。"
+        }
+      ],
+      "difficulty": {
+        "framework": "audit_depth_v1",
+        "level": 4,
+        "calibration": "uncalibrated"
+      },
+      "misconceptions": [
+        "尝试失败几次便断言不可能",
+        "认为翻转两格总是增加2个黑格"
+      ],
+      "review": {
+        "status": "ai_draft",
+        "teacher_reviewed": false,
+        "math_check": "programmatically_checked_or_algebra_checked"
+      },
+      "provenance": {
+        "origin": "newly_composed",
+        "source_problem_ids": [],
+        "rights_status": "new_text_not_an_upstream_relicense",
+        "novelty_note": "本次新编，未逐字复制来源；不承诺题型或数字在数学史上从未出现"
+      },
+      "visual_plan": "显示黑格数及其奇偶，分别演示增加2、减少2、保持不变。"
+    }
+  ],
+  "review_note": "全部AI生成初稿，未经过教师审核；没有学生作答数据，不能用于奥数能力认证。"
+}

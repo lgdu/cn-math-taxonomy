@@ -10,6 +10,8 @@
 
 **[→ 在线试用诊断（演示：配方法）](https://math.pansgo.com/diagnose/?target=cnm_221&demo=1)** · [首页](https://math.pansgo.com/) · [知识图谱](https://math.pansgo.com/explore/) · [诊断工具](https://math.pansgo.com/diagnose/) · [GitHub Pages 备份](https://xiaoyang111222.github.io/cn-math-taxonomy/)
 
+> **奥数覆盖审查与独立扩展提案（本 fork）**：见 [审查与工程教学模块](docs/olympiad/README.md)。包含高年级覆盖矩阵、工程题方法索引、原创样题及诊断/动画脚本；均为待审核初稿，尚未接入现有诊断工具。
+
 ![首页：三步说明、实时统计和年级入口](screenshots/06-home.png)
 
 ![知识图谱：配方法附近的先修（向上 2 层，向下 1 层）](screenshots/07-explore-221.png)
